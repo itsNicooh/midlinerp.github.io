@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MidLineRP - Shop</title>
+  <style>
+    body {
+      background: #121212;
+      color: #eee;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 { margin: 0; color: #f0a500; }
+    .shop-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .item {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 8px;
+      margin: 10px;
+      width: 250px;
+      padding: 15px;
+      text-align: center;
+    }
+    .item h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+    .item ul {
+      text-align: left;
+      margin-bottom: 10px;
+      padding-left: 20px;
+    }
+    .item button {
+      background: #f0a500;
+      border: none;
+      border-radius: 4px;
+      color: #121212;
+      cursor: pointer;
+      padding: 10px 16px;
+      font-size: 1em;
+    }
+    .item button:hover {
+      background: #ffc869;
+    }
+    footer {
+      background: #1f1f1f;
+      color: #aaa;
+      padding: 10px;
+      text-align: center;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: #f0a500;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MidLineRP - Shop</h1>
+    <p>Acquista pacchetti VIP e oggetti esclusivi</p>
+  </header>
+
+  <div class="shop-container">
+
+    <!-- AutVip -->
+    <div class="item">
+      <h2>VIP - AutVip</h2>
+      <ul>
+        <li>🚗 Tesla</li>
+        <li>💰 100.000$</li>
+        <li>💨 Fumogeni</li>
+        <li>🌱 Semi di droga</li>
+      </ul>
+      <button onclick="copyCommand('/givevip AutVip tesla soldi fumogeni semidroga')">Copia comando</button>
+    </div>
+
+    <!-- Puoi aggiungere altri item sotto -->
+
+  </div>
+
+  <footer>
+    <p>Contattaci su Discord: <a href="//link-del-tuo-server">midlineRP#0000</a></p>
+  </footer>
+
+  <script>
+    function copyCommand(cmd) {
+      navigator.clipboard.writeText(cmd)
+        .then(() => alert('Comando copiato: ' + cmd))
+        .catch(err => console.error('Errore: ', err));
+    }
+  </script>
+
+</body>
+</html>
